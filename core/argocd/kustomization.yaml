@@ -12,3 +12,10 @@ secretGenerator:
     options:
       labels: 
         argocd.argoproj.io/secret-type: repository
+  - name: my-repo-secret
+    literals:
+      - type=git
+      - url=https://github.com/Guitou-Caelis/formation-k8s.git
+    options:
+      labels:
+        argocd.argoproj.io/secret-type: repo-creds
